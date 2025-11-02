@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { asText, Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";

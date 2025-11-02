@@ -6,9 +6,9 @@ import { Suspense } from "react";
 import dynamic from "next/dynamic";
 // import { Perf } from "r3f-perf";
 
-type Props = {};
 
-export default function ViewCanvas({}: Props) {
+
+export default function ViewCanvas() {
   const Loader = dynamic(
     () => import("@react-three/drei").then((mod) => mod.Loader),
     { ssr: false }
