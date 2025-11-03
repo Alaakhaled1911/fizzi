@@ -1,26 +1,22 @@
-"use client";
+"use client"
 
-import { Bounded } from "@/components/Bounded";
-import { asText, Content } from "@prismicio/client";
-import {
-  PrismicRichText,
-  PrismicText,
-  SliceComponentProps,
-} from "@prismicio/react";
-import { View } from "@react-three/drei";
-import Scene from "./Scene";
-import clsx from "clsx";
+import type React from "react"
+import { Bounded } from "@/components/Bounded"
+import { asText, type Content } from "@prismicio/client"
+import { PrismicRichText, PrismicText, type SliceComponentProps } from "@prismicio/react"
+import { View } from "@react-three/drei"
+import Scene from "./Scene"
+import clsx from "clsx"
 
 /**
  * Props for `AlternatingText`.
  */
-export type AlternatingTextProps =
-  SliceComponentProps<Content.AlternatingTextSlice>;
+export type AlternatingTextProps = SliceComponentProps<Content.AlternatingTextSlice>
 
 /**
  * Component for "AlternatingText" Slices.
  */
-const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
+const AlternatingText = ({ slice }: AlternatingTextProps): React.ReactNode => {
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -41,7 +37,6 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
               <div
                 className={clsx(
                   index % 2 === 0 ? "col-start-1" : "md:col-start-2",
-
                   "rounded-lg p-4 backdrop-blur-lg max-md:bg-white/30",
                 )}
               >
@@ -57,7 +52,7 @@ const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
         </div>
       </div>
     </Bounded>
-  );
-};
+  )
+}
 
-export default AlternatingText;
+export default AlternatingText
